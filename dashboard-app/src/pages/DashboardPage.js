@@ -20,6 +20,19 @@ const DashboardItems = [
       chartType: 'line',
     },
   },
+  {
+    id: 1,
+    name: 'New Chart',
+    vizState: {
+      query: {
+        measures: ['Pedido.count'],
+        timeDimensions: [],
+        order: [],
+        dimensions: ['Cliente.nombre'],
+      },
+      chartType: 'area',
+    },
+  },
 ];
 
 const DashboardPage = () => {
