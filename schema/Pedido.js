@@ -32,12 +32,12 @@ cube(`Pedido`, {
     
     fecha_compra: {
       sql: `fecha_compra`,
-      type: `time`
+      type: `string`
     },
     
     fecha_vencimiento: {
       sql: `fecha_vencimiento`,
-      type: `time`
+      type: `string`
     }
     
   },

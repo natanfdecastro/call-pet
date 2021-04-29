@@ -119,10 +119,10 @@ import palette from "../theme/palette";const useStyles = makeStyles(theme => ({
                         {obj["Pedido.consumo_dias"]}
                       </TableCell>
                       <TableCell>
-                        {obj["Pedido.fecha_compra"]}
+                        {moment(obj["Pedido.fecha_compra"]).format("DD/MM/YYYY")}
                       </TableCell>
                       <TableCell>
-                        {obj["Pedido.fecha_vencimiento"]}
+                        {moment(obj["Pedido.fecha_vencimiento"]).format("DD/MM/YYYY")}
                       </TableCell>
                     </TableRow>
                   ))}
