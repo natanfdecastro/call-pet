@@ -11,7 +11,7 @@ import TableHead from '@material-ui/core/TableHead';
 import TableRow from '@material-ui/core/TableRow';
 const COLORS_SERIES = ['#FF6492', '#141446', '#7A77FF'];
 const commonOptions = {
-  maintainAspectRatio: false,
+  maintainAspectRatio: true,
 };
 const TypeToChartComponent = {
   line: ({ resultSet }) => {
