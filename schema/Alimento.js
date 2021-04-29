@@ -16,17 +16,34 @@ cube(`Alimento`, {
   },
   
   dimensions: {
+
+     id: {
+      sql: `id`,
+      type: `number`,
+      primaryKey: true,
+      shown: true
+    },
+
     marca: {
       sql: `marca`,
       type: `string`
     },
+
+    presentacion: {
+      sql: `presentacion`,
+      type: `string`
+    },
     
-    id: {
-      sql: `id`,
-      type: `number`,
-      primaryKey: true
+    consumo_diario: {
+      sql: `consumo_diario`,
+      type: `string`
+    },
+
+    id_mascota: {
+      sql: `id_mascota`,
+      type: `number`
     }
   },
-  
+
   dataSource: `default`
 });
