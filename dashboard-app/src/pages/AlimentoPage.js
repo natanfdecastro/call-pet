@@ -1,7 +1,11 @@
 import React from "react";
-import { makeStyles } from "@material-ui/styles";import Table from "../components/TableAlimento.js";const useStyles = makeStyles(theme => ({
+import { makeStyles, ThemeProvider } from "@material-ui/core/styles";
+import palette from "../theme/palette";
+import Table from "../components/TableAlimento.js";
+const useStyles = makeStyles(theme => ({
   root: {
-    padding: theme.spacing(4)
+    padding: theme.spacing(4),
+    backgroundColor: palette.primary.light
   },
   content: {
     marginTop: 15
