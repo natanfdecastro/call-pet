@@ -15,19 +15,24 @@ cube(`Cliente`, {
   measures: {
     count: {
       type: `count`,
-      drillMembers: [primerApellido, segundoApellido, id]
+      drillMembers: [primer_apellido, segundo_apellido, id]
     }
   },
   
   dimensions: {
-    direccionEntrega: {
+    direccion_entrega: {
       sql: `direccion_entrega`,
       type: `string`
     },
     
     notificacion: {
       sql: `notificacion`,
-      type: `string`
+      type: `boolean`
+    },
+
+    telefono: {
+      sql: `telefono`,
+      type: `number`
     },
     
     nombre: {
@@ -35,12 +40,12 @@ cube(`Cliente`, {
       type: `string`
     },
     
-    primerApellido: {
+    primer_apellido: {
       sql: `primer_apellido`,
       type: `string`
     },
     
-    segundoApellido: {
+    segundo_apellido: {
       sql: `segundo_apellido`,
       type: `string`
     },
@@ -48,7 +53,8 @@ cube(`Cliente`, {
     id: {
       sql: `id`,
       type: `number`,
-      primaryKey: true
+      primaryKey: true,
+      shown: true
     }
   },
   
