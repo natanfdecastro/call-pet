@@ -2,7 +2,6 @@ import { colors } from '@material-ui/core';
 
 const white = '#FFFFFF';
 const black = '#000000';
-
 export default {
   black,
   white,
@@ -13,6 +12,9 @@ export default {
     normal: '#7A77FF',
     action: '#EEEDFF',
     light: '#F3F3FB',
+    blue: '#1976d2',
+    red: '#d32f2f'
+
   },
   secondary: {
     contrastText: white,
