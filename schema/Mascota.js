@@ -16,15 +16,21 @@ cube(`Mascota`, {
   },
   
   dimensions: {
-    especie: {
-      sql: `especie`,
-      type: `string`
-    },
-    
     id: {
       sql: `id`,
       type: `number`,
-      primaryKey: true
+      primaryKey: true,
+      shown: true
+    },
+
+    nombre: {
+      sql: `nombre`,
+      type: `string`
+    },
+
+    especie: {
+      sql: `especie`,
+      type: `string`
     },
     
     raza: {
@@ -32,9 +38,9 @@ cube(`Mascota`, {
       type: `string`
     },
     
-    nombre: {
-      sql: `nombre`,
-      type: `string`
+    id_cliente: {
+      sql: `id_cliente`,
+      type: `number`
     }
   },
   
