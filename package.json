@@ -13,6 +13,8 @@
     "@cubejs-backend/server": "^0.26.103"
   },
   "dependencies": {
+    "@material-ui/core": "^4.11.4",
+    "material-table": "^1.69.3",
     "react-perfect-scrollbar": "^1.5.8",
     "typeface-roboto": "^1.1.13"
   }

@@ -9,7 +9,6 @@ const Dashboard = ({ children }) => (
       padding: 24,
     }}
     justify="space-around"
-    alignItems="flex-start"
   >
     {children}
   </Grid>
