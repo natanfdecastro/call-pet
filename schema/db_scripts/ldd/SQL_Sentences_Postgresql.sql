@@ -8,13 +8,22 @@ direccion_entrega VARCHAR(100) NOT NULL,
 notificacion BOOLEAN NOT NULL
 );
 
+CREATE TABLE Alimento (
+id SERIAL PRIMARY KEY,
+marca VARCHAR(30) NOT NULL,
+presentacion VARCHAR(30) NOT NULL,
+consumo_diario VARCHAR(30) NOT NULL
+);
+
 CREATE TABLE Mascota (
 id SERIAL PRIMARY KEY,
 nombre VARCHAR(30) NOT NULL,
 especie VARCHAR(30) NOT NULL,
 raza VARCHAR(30) NOT NULL,
 id_cliente INTEGER NOT NULL,
-FOREIGN KEY (id_cliente) REFERENCES Cliente(id)
+id_alimento INTEGER NOT NULL,
+FOREIGN KEY (id_cliente) REFERENCES Cliente(id),
+FOREIGN KEY (id_alimento) REFERENCES Alimento(id)
 );
 
 CREATE TABLE Pedido (
@@ -27,14 +36,7 @@ id_cliente INTEGER NOT NULL,
 FOREIGN KEY (id_cliente) REFERENCES Cliente(id)
 );
 
-CREATE TABLE Alimento (
-id SERIAL PRIMARY KEY,
-marca VARCHAR(30) NOT NULL,
-presentacion VARCHAR(30) NOT NULL,
-consumo_diario VARCHAR(30) NOT NULL,
-id_mascota INTEGER NOT NULL,
-FOREIGN KEY (id_mascota) REFERENCES Mascota(id)
-);
+
 
 CREATE TABLE Proveedor (
 id SERIAL PRIMARY KEY,
